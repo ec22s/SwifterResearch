@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,10 +12,10 @@
 		3128073D21A11DC000306C4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3128073B21A11DC000306C4C /* Main.storyboard */; };
 		3128073F21A11DC100306C4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3128073E21A11DC100306C4C /* Assets.xcassets */; };
 		3128074221A11DC100306C4C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3128074021A11DC100306C4C /* LaunchScreen.storyboard */; };
-		3128076721A11F7F00306C4C /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3128076621A11F7F00306C4C /* Swifter.framework */; };
 		3147AB3621A1572E005FB6B7 /* SwifterResearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3147AB3521A1572E005FB6B7 /* SwifterResearchUITests.swift */; };
 		3155E52621A1916F00784D7F /* StubServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155E52521A1916F00784D7F /* StubServer.swift */; };
 		317112DC21A12EEB00A34B12 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 317112DA21A12EE600A34B12 /* index.html */; };
+		CE0FBF672ECB96D5005275A7 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = CE0FBF662ECB96D5005275A7 /* Swifter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,6 @@
 		3128073E21A11DC100306C4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3128074121A11DC100306C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3128074321A11DC100306C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3128076621A11F7F00306C4C /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
 		3147AB3321A1572E005FB6B7 /* SwifterResearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwifterResearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3147AB3521A1572E005FB6B7 /* SwifterResearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwifterResearchUITests.swift; sourceTree = "<group>"; };
 		3147AB3721A1572E005FB6B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3128076721A11F7F00306C4C /* Swifter.framework in Frameworks */,
+				CE0FBF672ECB96D5005275A7 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,7 +68,6 @@
 				3128073621A11DC000306C4C /* SwifterResearch */,
 				3147AB3421A1572E005FB6B7 /* SwifterResearchUITests */,
 				3128073521A11DC000306C4C /* Products */,
-				3128076521A11F7F00306C4C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,14 +94,6 @@
 			path = SwifterResearch;
 			sourceTree = "<group>";
 		};
-		3128076521A11F7F00306C4C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3128076621A11F7F00306C4C /* Swifter.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		3147AB3421A1572E005FB6B7 /* SwifterResearchUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +114,6 @@
 				3128073021A11DC000306C4C /* Sources */,
 				3128073121A11DC000306C4C /* Frameworks */,
 				3128073221A11DC000306C4C /* Resources */,
-				3128076921A11FAD00306C4C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -181,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 3128072B21A11DC000306C4C;
+			packageReferences = (
+				CE0FBF652ECB96D5005275A7 /* XCRemoteSwiftPackageReference "swifter" */,
+			);
 			productRefGroup = 3128073521A11DC000306C4C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -211,27 +203,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3128076921A11FAD00306C4C /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Swifter.framework",
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3128073021A11DC000306C4C /* Sources */ = {
@@ -403,17 +374,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T97E8ZWW3A;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				DEVELOPMENT_TEAM = TAFC2PM76F;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwifterResearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ysome1971.SwifterResearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ec22s.SwifterResearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,17 +393,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T97E8ZWW3A;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				DEVELOPMENT_TEAM = TAFC2PM76F;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = SwifterResearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.ysome1971.SwifterResearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ec22s.SwifterResearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,6 +476,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE0FBF652ECB96D5005275A7 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE0FBF662ECB96D5005275A7 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0FBF652ECB96D5005275A7 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3128072C21A11DC000306C4C /* Project object */;
 }
