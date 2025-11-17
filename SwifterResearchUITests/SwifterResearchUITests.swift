@@ -13,7 +13,7 @@ class SwifterResearchUITests: XCTestCase {
 
     override func setUp() {
         continueAfterFailure = false
-        app.launchEnvironment = ["STUB": "http://localhost:9080/"]
+        app.launchEnvironment = ["STUB": "http://localhost:9080/index.html"]
         app.launch()
     }
 
